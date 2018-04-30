@@ -11,6 +11,6 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.4, random_
 
 knn = KNeighborsClassifier(n_neighbors=1)
 knn.fit(X_train, y_train)
-predicted = knn.predict(X_train)
+predicted = knn.predict(X_test)
 
-print (metrics.accuracy_score(y_train, predicted))
+print (metrics.accuracy_score(y_test, predicted))
